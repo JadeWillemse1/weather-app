@@ -1,4 +1,14 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  background: #3EADCF;
+  background: -webkit-linear-gradient(to right, #3EADCF, #ABE9CD);
+  background: linear-gradient(to right, #83EAF1, #63A4FF);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +20,140 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+
+.app {
+  margin-top: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.app .search {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  padding: 0;
+  max-width: 600px;
+  border-radius: 6px;
+}
+
+.app .search button {
+  margin-top: 10px;
+  margin-left: 0;
+  height: 20px;
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+  border: 1px solid rgba(255,255,255, 0.8);
+}
+
+
+.app input {
+  width: 100%;
+  border-radius: 11px;
+  border: 1px solid rgba(255,255,255, 0.8);
+  margin-top: 3rem;
+  margin-right: 0;
+  padding: '1rem 1rem';
+  background: rgba(255,255,255, 0.1);
+  color: #f8f8f8;
+  height: 30px;
+}
+
+::placeholder {
+  padding-left: 1rem;
+  color: #f8f8f8;
+}
+
+.app .currentWeather {
+  margin: 4rem auto;
+  max-width: 600px;
+  height: 400px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255, 0.2);
+}
+
+.app .currentWeather .top h4 {
+  padding-top: 1rem;
+}
+
+.app .currentWeather .bottom {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.app .currentWeather .bottom p {
+  padding: 0.5rem;
+}
+
+.app .currentWeather .bottom .left {
+  margin-top: 3rem;
+}
+
+.app .currentWeather .bottom .right {
+  margin-top: 3rem;
+}
+
+.app button {
+  height: 30px;
+  border-radius: 12px;
+  background: rgba(255,255,255, 0.1);
+  color: #f8f8f8;
+  border: 1px solid rgba(255,255,255, 0.8);
+}
+
+.app .navButton {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  max-width: 600px;
+  border-radius: 6px;
+  margin: 4rem auto;
+  height: 30px;
+  border-radius: 12px;
+}
+
+.app .navButton button {
+  margin-top: 0;
+  margin-left: 0;
+  height: 30px;
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+  border: 1px solid rgba(255,255,255, 0.8);
+}
+
+.app button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #f8f8f8;
+}
+
+.app button:active {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(2px);
 }
