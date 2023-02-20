@@ -35,25 +35,13 @@ const ForcastWeather = (props) => {
     const [max5, setMax5] = useState("");
     const [icon5, setIcon5] = useState("");
     const [description5, setDescription5] = useState("");
-    const [date6, setDate6] = useState("");
-    const [temp6, setTemp6] = useState("");
-    const [min6, setMin6] = useState("");
-    const [max6, setMax6] = useState("");
-    const [icon6, setIcon6] = useState("");
-    const [description6, setDescription6] = useState("");
-    const [date7, setDate7] = useState("");
-    const [temp7, setTemp7] = useState("");
-    const [min7, setMin7] = useState("");
-    const [max7, setMax7] = useState("");
-    const [icon7, setIcon7] = useState("");
-    const [description7, setDescription7] = useState("");
 
     const getWeather = async () => {
         try {
             const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${props.place}&units=metric&APPID=ea4107b82a191ae093398d7b5d169c3a`);
             const latitude = res.data.coord.lat;
             const longitude =res.data.coord.lon;
-            const extdata = await axios.get(` https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&cnt=7&appid=ea4107b82a191ae093398d7b5d169c3a&units=metric`);
+            const extdata = await axios.get(` https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&cnt=33&appid=ea4107b82a191ae093398d7b5d169c3a&units=metric`);
 //            const extdata = await axios.get(` https://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longitude}&cnt=7&appid=ea4107b82a191ae093398d7b5d169c3a&units=metric`);
  //           const extdata = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/?q=${props.place}&cnt=7&appid=ea4107b82a191ae093398d7b5d169c3a&units=metric`);          
             setCity(extdata.data.city.name);
@@ -64,42 +52,30 @@ const ForcastWeather = (props) => {
             setMax1(extdata.data.list[0].main.temp_max.toFixed());
             setIcon1("http://openweathermap.org/img/wn/" + extdata.data.list[0].weather[0].icon + "@2x.png");
             setDescription1(extdata.data.list[0].weather[0].description);
-            setDate2(extdata.data.list[1].dt);
-            setTemp2(extdata.data.list[1].main.temp.toFixed());
-            setMin2(extdata.data.list[1].main.temp_min.toFixed());
-            setMax2(extdata.data.list[1].main.temp_max.toFixed());
-            setIcon2("http://openweathermap.org/img/wn/" + extdata.data.list[1].weather[0].icon + "@2x.png");
-            setDescription2(extdata.data.list[1].weather[0].description);
-            setDate3(extdata.data.list[2].dt);
-            setTemp3(extdata.data.list[2].main.temp.toFixed());
-            setMin3(extdata.data.list[2].main.temp_min.toFixed());
-            setMax3(extdata.data.list[2].main.temp_max.toFixed());
-            setIcon3("http://openweathermap.org/img/wn/" + extdata.data.list[2].weather[0].icon + "@2x.png");
-            setDescription3(extdata.data.list[2].weather[0].description);
-            setDate4(extdata.data.list[3].dt);
-            setTemp4(extdata.data.list[3].main.temp.toFixed());
-            setMin4(extdata.data.list[3].main.temp_min.toFixed());
-            setMax4(extdata.data.list[3].main.temp_max.toFixed());
-            setIcon4("http://openweathermap.org/img/wn/" + extdata.data.list[3].weather[0].icon + "@2x.png");
-            setDescription4(extdata.data.list[3].weather[0].description);
-            setDate5(extdata.data.list[4].dt);
-            setTemp5(extdata.data.list[4].main.temp.toFixed());
-            setMin5(extdata.data.list[4].main.temp_min.toFixed());
-            setMax5(extdata.data.list[4].main.temp_max.toFixed());
-            setIcon5("http://openweathermap.org/img/wn/" + extdata.data.list[4].weather[0].icon + "@2x.png");
-            setDescription5(extdata.data.list[4].weather[0].description);
-            setDate6(extdata.data.list[5].dt);
-            setTemp6(extdata.data.list[5].main.temp.toFixed());
-            setMin6(extdata.data.list[5].main.temp_min.toFixed());
-            setMax6(extdata.data.list[5].main.temp_max.toFixed());
-            setIcon6("http://openweathermap.org/img/wn/" + extdata.data.list[5].weather[0].icon + "@2x.png");
-            setDescription6(extdata.data.list[5].weather[0].description);
-            setDate7(extdata.data.list[6].dt);
-            setTemp7(extdata.data.list[6].main.temp.toFixed());
-            setMin7(extdata.data.list[6].main.temp_min.toFixed());
-            setMax7(extdata.data.list[6].main.temp_max.toFixed());
-            setIcon7("http://openweathermap.org/img/wn/" + extdata.data.list[6].weather[0].icon + "@2x.png");
-            setDescription7(extdata.data.list[6].weather[0].description);
+            setDate2(extdata.data.list[8].dt);
+            setTemp2(extdata.data.list[8].main.temp.toFixed());
+            setMin2(extdata.data.list[8].main.temp_min.toFixed());
+            setMax2(extdata.data.list[8].main.temp_max.toFixed());
+            setIcon2("http://openweathermap.org/img/wn/" + extdata.data.list[8].weather[0].icon + "@2x.png");
+            setDescription2(extdata.data.list[8].weather[0].description);
+            setDate3(extdata.data.list[16].dt);
+            setTemp3(extdata.data.list[16].main.temp.toFixed());
+            setMin3(extdata.data.list[16].main.temp_min.toFixed());
+            setMax3(extdata.data.list[16].main.temp_max.toFixed());
+            setIcon3("http://openweathermap.org/img/wn/" + extdata.data.list[16].weather[0].icon + "@2x.png");
+            setDescription3(extdata.data.list[16].weather[0].description);
+            setDate4(extdata.data.list[24].dt);
+            setTemp4(extdata.data.list[24].main.temp.toFixed());
+            setMin4(extdata.data.list[24].main.temp_min.toFixed());
+            setMax4(extdata.data.list[24].main.temp_max.toFixed());
+            setIcon4("http://openweathermap.org/img/wn/" + extdata.data.list[24].weather[0].icon + "@2x.png");
+            setDescription4(extdata.data.list[24].weather[0].description);
+            setDate5(extdata.data.list[32].dt);
+            setTemp5(extdata.data.list[32].main.temp.toFixed());
+            setMin5(extdata.data.list[32].main.temp_min.toFixed());
+            setMax5(extdata.data.list[32].main.temp_max.toFixed());
+            setIcon5("http://openweathermap.org/img/wn/" + extdata.data.list[32].weather[0].icon + "@2x.png");
+            setDescription5(extdata.data.list[32].weather[0].description);
         } catch (err) {
             console.error(err);
         }
@@ -124,16 +100,10 @@ const ForcastWeather = (props) => {
     var dayname5 = new Date(date5 * 1000).toLocaleDateString("en", {
         weekday: "long",
     });
-    var dayname6 = new Date(date6 * 1000).toLocaleDateString("en", {
-        weekday: "long",
-    });
-    var dayname7 = new Date(date7 * 1000).toLocaleDateString("en", {
-        weekday: "long",
-    });
 
     return (
         <div>
-            <h4>7 Day Forcast</h4>
+            <h4>7 Day Forecast</h4>
             <p>{city}</p>
             <div className="days">
                 <div className="day">
@@ -165,18 +135,6 @@ const ForcastWeather = (props) => {
                     <img src={icon5} alt={description5} />
                     <p>{temp5}°C</p>
                     <p>L: {min5}°C &nbsp; H: {max5}°C</p>
-                </div>
-                <div className="day">
-                    <h5>{dayname6}</h5>
-                    <img src={icon6} alt={description6} />
-                    <p>{temp6}°C</p>
-                    <p>L: {min6}°C &nbsp; H: {max6}°C</p>
-                </div>
-                <div className="day">
-                    <h5>{dayname7}</h5>
-                    <img src={icon7} alt={description7} />
-                    <p>{temp7}°C</p>
-                    <p>L: {min7}°C &nbsp; H: {max7}°C</p>
                 </div>
             </div>
             
