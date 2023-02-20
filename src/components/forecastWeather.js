@@ -103,7 +103,7 @@ const ForcastWeather = (props) => {
 
     return (
         <div>
-            <h4>7 Day Forecast</h4>
+            <h4>5 Day Forecast</h4>
             <p>{city}</p>
             <div className="days">
                 <div className="day">
